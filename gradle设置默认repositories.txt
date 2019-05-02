@@ -1,0 +1,17 @@
+创建新Android App项目时,设置默认的repositories, 只需要如下两步即可：
+1.找到Android Studio的安装目录下的 build.gradle.ftl 文件
+我的是这个：D:\Program Files\Android\Android Studio\plugins\android\lib\templates\gradle-projects\NewAndroidProject\root\build.gradle.ftl
+
+2.修改文件中的仓库地址，把aliyun的仓库放在第1位，记得要修改2处：
+repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
+        jcenter()
+}
+复制代码allprojects {
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
+        jcenter()
+    }
+}
